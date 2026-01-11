@@ -7,8 +7,9 @@
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 50%, #ff9a9e 100%);
+    background-attachment: fixed;
     min-height: 100vh;
-    padding: 20px;
+    padding: 15px;
     color: #333;
 }
 
@@ -21,20 +22,21 @@ body {
 header {
     text-align: center;
     color: #fff;
-    padding: 40px 20px;
+    padding: 30px 15px;
     animation: fadeIn 1s ease-in;
     text-shadow: 2px 2px 8px rgba(0,0,0,0.1);
 }
 
 h1 {
-    font-size: 2.5em;
+    font-size: clamp(1.8em, 5vw, 2.5em);
     margin-bottom: 10px;
     text-shadow: 3px 3px 6px rgba(255,107,129,0.3);
     color: #fff;
+    line-height: 1.2;
 }
 
 .subtitle {
-    font-size: 1.2em;
+    font-size: clamp(1em, 3vw, 1.2em);
     opacity: 0.95;
     color: #fff;
 }
@@ -42,54 +44,57 @@ h1 {
 /* SEÇÃO DE TIMERS */
 .timers-section {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 20px;
-    margin: 40px 0;
+    margin: 30px 0;
 }
 
 .timer-card {
     background: rgba(255, 255, 255, 0.95);
     border-radius: 20px;
-    padding: 30px;
+    padding: 25px 20px;
     box-shadow: 0 10px 40px rgba(255,107,129,0.2);
     animation: slideUp 0.8s ease-out;
     border: 2px solid rgba(255,182,193,0.3);
 }
 
 .timer-title {
-    font-size: 1.5em;
+    font-size: clamp(1.2em, 4vw, 1.5em);
     color: #ff6b81;
     margin-bottom: 20px;
     text-align: center;
     font-weight: bold;
+    line-height: 1.3;
 }
 
 .timer-display {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 10px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
     margin-top: 20px;
 }
 
 .time-unit {
     text-align: center;
-    padding: 15px;
+    padding: 18px 10px;
     background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%);
-    border-radius: 10px;
+    border-radius: 12px;
     color: white;
     box-shadow: 0 4px 15px rgba(255,107,129,0.3);
 }
 
 .time-number {
-    font-size: 2em;
+    font-size: clamp(1.8em, 6vw, 2.2em);
     font-weight: bold;
     display: block;
+    line-height: 1;
 }
 
 .time-label {
-    font-size: 0.8em;
+    font-size: clamp(0.75em, 2.5vw, 0.85em);
     opacity: 0.9;
-    margin-top: 5px;
+    margin-top: 8px;
+    display: block;
 }
 
 /* SEÇÃO DE CARDS */
@@ -99,16 +104,17 @@ h1 {
 
 .section-title {
     color: white;
-    font-size: 2em;
+    font-size: clamp(1.5em, 5vw, 2em);
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 25px;
     text-shadow: 2px 2px 6px rgba(255,107,129,0.4);
+    padding: 0 10px;
 }
 
 .cards-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 25px;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+    gap: 20px;
     margin-bottom: 40px;
 }
 
@@ -122,19 +128,18 @@ h1 {
     border: 2px solid rgba(255,182,193,0.2);
 }
 
-.memory-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 50px rgba(255,107,129,0.35);
+.memory-card:active {
+    transform: scale(0.98);
 }
 
 .card-image {
     width: 100%;
-    height: 250px;
+    height: 220px;
     background: linear-gradient(135deg, #ffa8b5 0%, #ffccd5 50%, #ffeef1 100%);
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 4em;
+    font-size: clamp(3em, 10vw, 4em);
 }
 
 /* Para quando você adicionar fotos reais */
@@ -150,19 +155,21 @@ h1 {
 
 .card-content h3 {
     color: #ff6b81;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
+    font-size: clamp(1.1em, 4vw, 1.3em);
 }
 
 .card-content p {
     color: #666;
     line-height: 1.6;
+    font-size: clamp(0.95em, 3vw, 1em);
 }
 
 /* SEÇÃO DE MENSAGEM */
 .message-section {
     background: rgba(255, 255, 255, 0.95);
     border-radius: 20px;
-    padding: 40px;
+    padding: 30px 20px;
     margin: 40px 0;
     box-shadow: 0 10px 40px rgba(255,107,129,0.2);
     animation: fadeIn 1.5s ease-in;
@@ -171,24 +178,29 @@ h1 {
 
 .message-section h2 {
     color: #ff6b81;
-    font-size: 2em;
+    font-size: clamp(1.5em, 5vw, 2em);
     margin-bottom: 20px;
     text-align: center;
+    line-height: 1.3;
 }
 
 .message-content {
     color: #555;
     line-height: 1.8;
-    font-size: 1.1em;
-    text-align: justify;
+    font-size: clamp(1em, 3.5vw, 1.1em);
+    text-align: left;
+}
+
+.message-content p {
+    margin-bottom: 15px;
 }
 
 /* FOOTER */
 footer {
     text-align: center;
     color: white;
-    padding: 30px;
-    font-size: 1.1em;
+    padding: 25px 15px;
+    font-size: clamp(1em, 3.5vw, 1.1em);
 }
 
 /* ANIMAÇÕES */
@@ -212,25 +224,99 @@ footer {
     }
 }
 
-/* RESPONSIVIDADE */
+/* OTIMIZAÇÃO MOBILE */
 @media (max-width: 768px) {
-    h1 {
-        font-size: 2em;
+    body {
+        padding: 10px;
+    }
+
+    header {
+        padding: 25px 10px;
+    }
+
+    .timer-card {
+        padding: 20px 15px;
     }
 
     .timer-display {
-        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+
+    .time-unit {
+        padding: 15px 8px;
+    }
+
+    .cards-grid {
+        gap: 18px;
+    }
+
+    .card-image {
+        height: 200px;
+    }
+
+    .card-content {
+        padding: 18px;
+    }
+
+    .message-section {
+        padding: 25px 18px;
+    }
+
+    .message-content {
+        text-align: left;
+    }
+}
+
+/* OTIMIZAÇÃO PARA TELAS MUITO PEQUENAS */
+@media (max-width: 380px) {
+    body {
+        padding: 8px;
+    }
+
+    .timer-card {
+        padding: 18px 12px;
+    }
+
+    .time-unit {
+        padding: 12px 6px;
+    }
+
+    .card-image {
+        height: 180px;
+    }
+
+    .card-content {
+        padding: 15px;
+    }
+
+    .message-section {
+        padding: 20px 15px;
+    }
+}
+
+/* MELHORIA PARA TOUCH */
+@media (hover: none) and (pointer: coarse) {
+    .memory-card:hover {
+        transform: none;
+    }
+    
+    .memory-card:active {
+        transform: scale(0.97);
+        box-shadow: 0 10px 35px rgba(255,107,129,0.3);
+    }
+}
+
+/* ORIENTAÇÃO LANDSCAPE NO MOBILE */
+@media (max-width: 768px) and (orientation: landscape) {
+    .timer-display {
+        grid-template-columns: repeat(4, 1fr);
     }
 
     .time-number {
         font-size: 1.5em;
     }
 
-    .cards-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .message-section {
-        padding: 25px;
+    .card-image {
+        height: 160px;
     }
 }
