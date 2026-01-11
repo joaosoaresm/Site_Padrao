@@ -13,6 +13,7 @@ function calcularTempo(dataInicio) {
     const diff = agora - dataInicio;
 
     // Cálculos
+    const segundos = Math.floor(diff / 1000);
     const minutos = Math.floor(diff / 1000 / 60);
     const horas = Math.floor(diff / 1000 / 60 / 60);
     const dias = Math.floor(diff / 1000 / 60 / 60 / 24);
@@ -22,12 +23,14 @@ function calcularTempo(dataInicio) {
     const diasRestantes = dias % 30;
     const horasRestantes = horas % 24;
     const minutosRestantes = minutos % 60;
+    const segundosRestantes = segundos % 60;
 
     return {
         meses,
         dias: diasRestantes,
         horas: horasRestantes,
-        minutos: minutosRestantes
+        minutos: minutosRestantes,
+        segundos: segundosRestantes
     };
 }
 
@@ -44,16 +47,18 @@ function atualizarTimers() {
     document.getElementById('conv-dias').textContent = tempoConversa.dias;
     document.getElementById('conv-horas').textContent = tempoConversa.horas;
     document.getElementById('conv-minutos').textContent = tempoConversa.minutos;
+    document.getElementById('conv-segundos').textContent = tempoConversa.segundos;
 
     // Atualiza o cronômetro de namoro
     document.getElementById('nam-meses').textContent = tempoNamoro.meses;
     document.getElementById('nam-dias').textContent = tempoNamoro.dias;
     document.getElementById('nam-horas').textContent = tempoNamoro.horas;
     document.getElementById('nam-minutos').textContent = tempoNamoro.minutos;
+    document.getElementById('nam-segundos').textContent = tempoNamoro.segundos;
 }
 
 // Inicializa os timers quando a página carregar
 atualizarTimers();
 
-// Atualiza os timers a cada 1 minuto (60000 milissegundos)
-setInterval(atualizarTimers, 60000);
+// Atualiza os timers a cada 1 segundo (1000 milissegundos)
+setInterval(atualizarTimers, 1000);
