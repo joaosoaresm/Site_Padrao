@@ -1,7 +1,7 @@
 // ⚠️ IMPORTANTE: Altere estas datas para as suas datas reais!
 // Formato: 'YYYY-MM-DD HH:mm:ss'
-const dataConversa = new Date('2024-01-15 14:30:00');
-const dataNamoro = new Date('2024-03-20 19:00:00');
+const dataConversa = new Date('2025-08-29 13:55:00');
+const dataNamoro = new Date('2025-11-17 12:00:00');
 
 /**
  * Calcula o tempo decorrido desde uma data inicial
