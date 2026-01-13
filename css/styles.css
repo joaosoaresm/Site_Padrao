@@ -134,22 +134,23 @@ h1 {
 
 .card-image {
     width: 100%;
-    min-height: 300px;
-    max-height: 400px;
+    height: 250px;
     background: linear-gradient(135deg, #ffa8b5 0%, #ffccd5 50%, #ffeef1 100%);
     display: flex;
     align-items: center;
     justify-content: center;
     overflow: hidden;
+    border-radius: 15px 15px 0 0;
     position: relative;
 }
 
 .card-image img {
     width: 100%;
     height: 100%;
-    object-fit: contain;      /* ← MUDE de 'cover' para 'contain' */
+    object-fit: cover;
     object-position: center;
     display: block;
+    flex-shrink: 0;
 }
 
 .card-content {
@@ -227,7 +228,6 @@ footer {
     }
 }
 
-/* OTIMIZAÇÃO MOBILE */
 @media (max-width: 768px) {
     body {
         padding: 10px;
@@ -251,10 +251,17 @@ footer {
 
     .cards-grid {
         gap: 18px;
+        max-width: 90%;
+        margin: 0 auto;
     }
 
     .card-image {
+        height: 200px;  /* ← Altura ajustada para mobile */
+    }
+
+    .card-image img {
         height: 200px;
+        object-fit: cover;
     }
 
     .card-content {
@@ -270,8 +277,7 @@ footer {
     }
 }
 
-/* OTIMIZAÇÃO PARA TELAS MUITO PEQUENAS */
-@media (max-width: 380px) {
+@media (max-width: 480px) {
     body {
         padding: 8px;
     }
@@ -285,7 +291,11 @@ footer {
     }
 
     .card-image {
-        height: 180px;
+        height: 150px;  /* ← Altura menor para telas pequenas */
+    }
+
+    .card-image img {
+        height: 150px;
     }
 
     .card-content {
@@ -294,32 +304,5 @@ footer {
 
     .message-section {
         padding: 20px 15px;
-    }
-}
-
-/* MELHORIA PARA TOUCH */
-@media (hover: none) and (pointer: coarse) {
-    .memory-card:hover {
-        transform: none;
-    }
-    
-    .memory-card:active {
-        transform: scale(0.97);
-        box-shadow: 0 10px 35px rgba(255,107,129,0.3);
-    }
-}
-
-/* ORIENTAÇÃO LANDSCAPE NO MOBILE */
-@media (max-width: 768px) and (orientation: landscape) {
-    .timer-display {
-        grid-template-columns: repeat(4, 1fr);
-    }
-
-    .time-number {
-        font-size: 1.5em;
-    }
-
-    .card-image {
-        height: 160px;
     }
 }
