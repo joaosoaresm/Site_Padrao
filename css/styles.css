@@ -199,6 +199,180 @@ h1 {
     margin-bottom: 15px;
 }
 
+/* === SEÇÃO DE APELIDOS === */
+.apelidos-section {
+    margin: 50px 0;
+    padding: 0 20px;
+}
+
+.apelidos-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.apelido-card {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    padding: 35px 30px;
+    box-shadow: 0 10px 40px rgba(255,107,129,0.2);
+    border: 2px solid rgba(255,182,193,0.3);
+    animation: slideUp 0.8s ease-out;
+    text-align: center;
+}
+
+.frases-card {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    padding: 35px 30px;
+    box-shadow: 0 10px 40px rgba(255,107,129,0.2);
+    border: 2px solid rgba(255,182,193,0.3);
+    animation: slideUp 0.8s ease-out;
+    grid-column: 1 / -1;
+}
+
+.apelido-header,
+.frase-header {
+    font-size: clamp(1.3em, 4vw, 1.5em);
+    color: #ff6b81;
+    font-weight: bold;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.apelidos-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: center;
+    align-items: center;
+}
+
+.apelido-tag {
+    background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%);
+    color: white;
+    padding: 12px 24px;
+    border-radius: 30px;
+    font-size: clamp(1em, 3.5vw, 1.15em);
+    font-weight: 600;
+    box-shadow: 0 5px 20px rgba(255,107,129,0.3);
+    transition: all 0.3s ease;
+}
+
+.apelido-tag:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 8px 25px rgba(255,107,129,0.4);
+}
+
+.frases-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 18px;
+}
+
+.frase-item {
+    background: linear-gradient(135deg, #fff5f7 0%, #ffe8ee 100%);
+    padding: 20px 25px;
+    border-radius: 18px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    border: 2px solid rgba(255,182,193,0.3);
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(255,107,129,0.15);
+}
+
+.frase-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(255,107,129,0.3);
+    background: linear-gradient(135deg, #ffe8ee 0%, #ffd9e0 100%);
+}
+
+.frase-emoji {
+    font-size: 2em;
+    flex-shrink: 0;
+}
+
+.frase-text {
+    color: #ff6b81;
+    font-weight: 600;
+    font-size: clamp(1em, 3.5vw, 1.15em);
+}
+
+/* === SEÇÃO DE SONHOS === */
+.sonhos-section {
+    margin: 50px 0;
+    padding: 0 20px;
+}
+
+.sonhos-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 35px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.sonho-categoria {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 25px;
+    padding: 40px 35px;
+    box-shadow: 0 10px 40px rgba(255,107,129,0.25);
+    border: 2px solid rgba(255,182,193,0.3);
+    animation: fadeIn 1.2s ease-in;
+}
+
+.sonho-categoria h3 {
+    font-size: clamp(1.4em, 4.5vw, 1.7em);
+    color: #ff6b81;
+    margin-bottom: 30px;
+    text-align: center;
+    font-weight: bold;
+    text-shadow: 1px 1px 3px rgba(255,107,129,0.1);
+}
+
+.sonhos-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    gap: 15px;
+}
+
+.sonhos-list li {
+    background: linear-gradient(135deg, #fff5f7 0%, #ffe8ee 100%);
+    padding: 20px 25px;
+    border-radius: 18px;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    border: 2px solid rgba(255,182,193,0.3);
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(255,107,129,0.15);
+}
+
+.sonhos-list li:hover {
+    transform: translateX(10px) scale(1.02);
+    box-shadow: 0 8px 30px rgba(255,107,129,0.3);
+    background: linear-gradient(135deg, #ffe8ee 0%, #ffd9e0 100%);
+    border-color: rgba(255,107,129,0.5);
+}
+
+.sonho-icon {
+    font-size: 2em;
+    flex-shrink: 0;
+    filter: drop-shadow(0 2px 4px rgba(255,107,129,0.2));
+}
+
+.sonho-text {
+    color: #555;
+    font-size: clamp(1em, 3.5vw, 1.15em);
+    line-height: 1.6;
+    font-weight: 500;
+}
+
 /* FOOTER */
 footer {
     text-align: center;
