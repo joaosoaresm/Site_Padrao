@@ -450,6 +450,89 @@ footer {
     .message-content {
         text-align: left;
     }
+
+    .apelidos-section,
+    .sonhos-section {
+        margin: 30px 0;
+        padding: 0 10px;
+    }
+
+    .apelidos-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .sonhos-container {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .apelido-card,
+    .frases-card {
+        padding: 25px 20px;
+    }
+
+    .sonho-categoria {
+        padding: 30px 20px;
+    }
+
+    .apelido-header,
+    .frase-header {
+        font-size: 1.3em;
+        margin-bottom: 20px;
+    }
+
+    .sonho-categoria h3 {
+        font-size: 1.4em;
+        margin-bottom: 25px;
+    }
+
+    .apelidos-list {
+        gap: 10px;
+    }
+
+    .apelido-tag {
+        padding: 10px 18px;
+        font-size: 1em;
+    }
+
+    .frases-list {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .frase-item {
+        padding: 16px 18px;
+    }
+
+    .frase-emoji {
+        font-size: 1.6em;
+    }
+
+    .frase-text {
+        font-size: 1em;
+    }
+
+    .sonhos-list {
+        gap: 12px;
+    }
+
+    .sonhos-list li {
+        padding: 16px 18px;
+        gap: 12px;
+    }
+
+    .sonho-icon {
+        font-size: 1.6em;
+    }
+
+    .sonho-text {
+        font-size: 1em;
+    }
+
+    .sonhos-list li:hover {
+        transform: translateX(5px);
+    }
 }
 
 @media (max-width: 480px) {
@@ -481,5 +564,60 @@ footer {
 
     .message-section {
         padding: 20px 15px;
+    }
+
+    .apelidos-section,
+    .sonhos-section {
+        padding: 0 8px;
+        margin: 25px 0;
+    }
+
+    .apelido-card,
+    .frases-card {
+        padding: 20px 15px;
+    }
+
+    .sonho-categoria {
+        padding: 25px 15px;
+    }
+
+    .apelido-header,
+    .frase-header {
+        font-size: 1.2em;
+    }
+
+    .sonho-categoria h3 {
+        font-size: 1.3em;
+    }
+
+    .apelido-tag {
+        padding: 8px 15px;
+        font-size: 0.95em;
+    }
+
+    .frase-item {
+        padding: 14px 15px;
+        gap: 10px;
+    }
+
+    .frase-emoji {
+        font-size: 1.4em;
+    }
+
+    .frase-text {
+        font-size: 0.95em;
+    }
+
+    .sonhos-list li {
+        padding: 14px 15px;
+        gap: 10px;
+    }
+
+    .sonho-icon {
+        font-size: 1.5em;
+    }
+
+    .sonho-text {
+        font-size: 0.95em;
     }
 }
